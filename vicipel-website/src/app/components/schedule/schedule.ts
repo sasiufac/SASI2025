@@ -61,7 +61,7 @@ export class Schedule {
     {
       // 4
       name: "Med. Vet. Ernesto Coser",
-      enterprise: "Méd. Veterinário e Gerente de Produtos da Datamars Trutest",
+      enterprise: "Gerente de Produtos da Datamars Trutest",
       photo: "assets/speakers/ernesto2.jpg"
     },
     {
@@ -79,7 +79,7 @@ export class Schedule {
     {
       // 7
       name: "Jaílson Barbosa",
-      enterprise: "SEBRAE-AC",
+      enterprise: "Analista SEBRAE-AC",
       photo: "assets/speakers/jailson.jpg"
     },
     {
@@ -123,7 +123,20 @@ export class Schedule {
       name: "Sr. Rodrigo Novaes",
       enterprise: "Produtor rural",
       photo: "assets/speakers/rodrigo.jpg"
-    }
+    },
+    {
+      //15
+      name: "Claudia Stehling",
+      enterprise: "Analista Técnica Sebrae Nacional"
+
+    },
+    {
+      //16
+      name: "Zootec. Guilherme Mossa", 
+      enterprise: "CNA"
+    }
+
+
   ]
 
   programacao: DiaEvento[] = [
@@ -154,20 +167,34 @@ export class Schedule {
         },
         {
           startTime: "09:30 - 10:00",
-          title: "Sucessão Familiar",
+          title: "Educação Financeira e Sucessão Familiar",
           speaker: [this.palestrantes[7].name],
           type: "palestra",
           description: null
         },
+        {
+          startTime: "10:00 - 10:30",
+          title: "Como impulsionar os pequenos negócios a partir da agregação de valor",
+          speaker: [this.palestrantes[15].name],
+          type: "palestra",
+          description: null
+        },
         {
-          startTime: "10:00 - 11:00",
+          startTime: "10:30 - 11:20",
           title: "Quais as vantagens e os desafios da utilização da transferência de embriões em gado leiteiro? ",
           speaker: [this.palestrantes[11].name],
           type: "palestra",
           description: null
         },
+        {
+          startTime: "11:20 - 12:10",
+          title: "PNCEBT - situação atual e desafios para evolução do status sanitário brasileiro",
+          speaker: [this.palestrantes[16].name],
+          type: "palestra",
+          description: null
+        },
         {
-          startTime: "12:00 - 14:00",
+          startTime: "12:10 - 14:00",
           title: "Almoço",
           speaker: null,
           type: "pausa",
@@ -175,7 +202,7 @@ export class Schedule {
         },
         {
           startTime: "14:00 - 15:00",
-          title: "Uso da cerca elétrica como ferramenta para otimizar a eficiência do pastejo ",
+          title: "Uso da cerca elétrica como ferramenta para otimizar a eficiência do pastejo",
           speaker: [this.palestrantes[4].name],
           type: "palestra",
           description: null
