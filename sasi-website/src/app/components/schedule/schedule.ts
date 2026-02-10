@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core'; // <-- Importação correta
+import { Component } from '@angular/core'; 
 
-// --- Interfaces de Definição (Modelo de Dados) ---
 interface Palestrante {
   id: string;
   name: string;
@@ -12,7 +11,6 @@ interface Palestrante {
 interface SessaoConfig {
   startTime: string;
   title: string;
-  // Agora usamos IDs para associar, muito mais seguro que índices de array
   speakerIds?: string[]; 
   type: "palestra" | "workshop" | "pausa" | "abertura" | "encerramento";
   description?: string | null;
