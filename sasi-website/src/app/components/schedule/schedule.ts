@@ -67,6 +67,31 @@ const PALESTRANTES_DB: Record<string, Palestrante> = {
     enterprise: "Rocketseat",
     photo: "assets/speakers/bruno_mestanza.jpeg",
   },
+  'crist': {
+    id: "crist",
+    name: "Cristiane Fernandez Rodrigues",
+    enterprise: null,
+  },
+  'leo-bandeira': {
+    id: "leo-bandeira",
+    name: "Leonardo da Silva de Oliveira Bandeira",
+    enterprise: 'SEBRAE'
+  },
+  'keneder': {
+    id: "keneder",
+    name: "Keneder Jesus Marino",
+    enterprise: ''
+  },
+  'rob': {
+    id: "rob",
+    name: "Robert Adan Costa Silva",
+    enterprise: null,
+  },
+  'leo': {
+    id: "leo",
+    name: "Leonardo Dias da Silva",
+    enterprise: null,
+  },
   'carlos_junior': {
     id: 'carlos_junior',
     name: "Carlos Alberto de Jesus Junior",
@@ -259,6 +284,12 @@ const PALESTRANTES_DB: Record<string, Palestrante> = {
     enterprise: "",
     photo: "assets/speakers/wiliam.jpg",
   },
+  'xadrez': {
+    id: 'xadrez',
+    name: "Federação Acreana de Xadrez",
+    enterprise:"",
+    photo: "assets/speakers/xadrez.jpg"
+  }
 };
 
 // --- Configuração da Agenda ---
@@ -336,19 +367,13 @@ const AGENDA_DATA: DiaEventoConfig[] = [
         startTime: "11:45 - 13:15",
         title: "Tecnologias em IA Aplicadas à Sistemas de Informação",
         speakerIds: [
+          "lucas_hidelbrando",
           "clecio",
           "ana_pavic",
           "thauanne"
         ],
         type: "palestra",
         description: "1:30 min / Teatro Universitário"
-      },
-      {
-        startTime: "13:15 - 14:00",
-        title: "Intervalo/ Almoço",
-        speakerIds: [],
-        type: "pausa",
-        description: "45 min / RU"
       },
       {
         startTime: "7:00 - 14:00",
@@ -368,7 +393,7 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       },
       {
         startTime: "16:00 - 18:00",
-        title: "Acessibilidade Web e Nurodivergentes",
+        title: "Acessibilidade Web e Neurodivergentes",
         speakerIds: [
           "joceli"
         ],
@@ -441,7 +466,7 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       },
       {
         startTime: "11:45 - 13:15",
-        title: "IA combina com a Psicologia ?",
+        title: "IA combina com a Psicologia?",
         speakerIds: [
           "hanrry"
         ],
@@ -479,7 +504,7 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       {
         startTime: "14:00 - 18:00",
         title: "1° Torneio de Xadrex - SASI 2026",
-        speakerIds: [],
+        speakerIds: ['xadrez'],
         type: "workshop",
         description: "@Equipe H | 4 horas / SebraeLab - Centro de Convivência (60 Pessoas)"
       }
@@ -530,15 +555,15 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       },
       {
         startTime: "11:45 - 13:15",
-        title: "rnp",
-        speakerIds: [],
+        title: "Mercado de trabalho de Cibersegurança e o Programa Hackers do Bem",
+        speakerIds: ['leo','rob','crist'],
         type: "palestra",
         description: "| 1:30 min / Teatro Universitário"
       },
       {
         startTime: "14:00 - 16:00",
         title: "Como a Cibersegurança afeta o meu dia a dia – Especial Mulheres",
-        speakerIds: [],
+        speakerIds: ['leo','rob','crist'],
         type: "palestra",
         description: "@Equipe C | 2 horas / Online (60 Pessoas)"
       },
@@ -563,7 +588,7 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       {
         startTime: "14:00 - 18:00",
         title: "1° Desafio Capture The Flag (CTF) - SASI 2026",
-        speakerIds: [],
+        speakerIds: ['rnp'],
         type: "workshop",
         description: "@Equipe F | 4 horas / WebAcademy Lab 1 (25 Pessoas)"
       }
@@ -582,8 +607,8 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       },
       {
         startTime: "8:00 - 9:40",
-        title: "Professor sebrae",
-        speakerIds: [],
+        title: "Professor SEBRAE",
+        speakerIds: ['leo-bandeira'],
         type: "palestra",
         description: "1:40 min / Teatro Universitário"
       },
@@ -619,7 +644,7 @@ const AGENDA_DATA: DiaEventoConfig[] = [
       {
         startTime: "11:45 - 13:15",
         title: "Apresentação Unidade Móvel de Educação do Instituto de Ensino e Pesquisa",
-        speakerIds: [],
+        speakerIds: ['keneder'],
         type: "palestra",
         description: "1:30 min / Teatro Universitário"
       },
@@ -638,7 +663,9 @@ const AGENDA_DATA: DiaEventoConfig[] = [
         speakerIds: [
           "clecio",
           "gustavo_ferreti",
-          "julio"
+          "julio",
+          "christopher",
+          "lucas_hidelbrando"
         ],
         type: "palestra",
         description: "@Equipe X | 4 horas / Lab 2 de SI (30 Pessoas)"
