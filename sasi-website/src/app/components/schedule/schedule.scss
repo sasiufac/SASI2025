@@ -1,40 +1,65 @@
+// Variáveis da Identidade SASI (Imagem)
+$sasi-purple: #8C52FF;
+$sasi-black: #000000;
+$sasi-dark-gray: #121212;
+$sasi-text-white: #ffffff;
+$sasi-text-muted: rgba(255, 255, 255, 0.7);
+$sasi-card-light: #fdfdfd;
+
 .programacao-section {
+  background-color: $sasi-black; // Fundo da seção em preto
+  color: $sasi-text-white;
+
+  .display-5 {
+    color: $sasi-text-white !important;
+  }
+
+  .lead {
+    color: $sasi-text-muted !important;
+  }
+
   .nav-pills {
     .nav-link {
       background-color: transparent;
-      color: var(--text-muted);
-      border: 2px solid #e9ecef;
+      color: $sasi-text-muted;
+      border: 2px solid rgba(255, 255, 255, 0.1);
       margin: 0.5rem 0.5rem;
       padding: 0.5rem 0.75rem;
       font-weight: 600;
       transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      color: var(--primary-green);
-      border-color: var(--primary-green);
-    }
-    .nav-link.active {
-      background-color: var(--primary-green);
-      border-color: var(--primary-green);
-      color: white;
+
+      &:hover {
+        color: $sasi-purple;
+        border-color: $sasi-purple;
+      }
+
+      &.active {
+        background-color: $sasi-purple !important;
+        border-color: $sasi-purple;
+        color: white !important;
+      }
     }
   }
 
   .schedule-item {
-    background: white;
+    background: $sasi-card-light; // Card mantido claro como solicitado
     border-radius: 15px;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .schedule-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    // Bordas laterais usando o roxo da identidade
+    &.border-primary { border-left: 4px solid $sasi-purple !important; }
   }
 
   .time-badge {
-    background: var(--primary-green);
+    background: $sasi-purple; // Badge em roxo
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -44,25 +69,32 @@
   }
 
   .session-title {
-    color: var(--text-dark);
+    color: #2c3e50; // Cor escura para ler dentro do card branco
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
 
   .session-speaker {
-    color: var(--primary-green);
+    color: $sasi-purple; // Nome do palestrante em roxo
     font-weight: 500;
   }
 
   .session-description {
-    color: var(--text-muted);
+    color: #6c757d; // Cinza para ler no card branco
     font-size: 0.9rem;
   }
 }
 
 .palestrantes-section {
+  background-color: #121212 !important; // Fundo da seção palestrantes
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  .display-5, .lead {
+    color: $sasi-text-white !important;
+  }
+
   .speaker-card {
-    background: white;
+    background: $sasi-card-light; // Card mantido claro como solicitado
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -70,10 +102,12 @@
     display: flex;
     align-items: center;
     padding: 1.5rem;
-  }
-  .speaker-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border: 1px solid $sasi-purple;
+    }
   }
 
   .speaker-content {
@@ -103,36 +137,28 @@
 
   .speaker-icon-fallback {
     font-size: 3rem;
-    color: var(--text-muted);
+    color: #6c757d;
   }
   
   .speaker-info {
-    // padding: 1.5rem;
-    // display: flex;
-    // align-items: center;
-    // justify-content: flex-start;
     flex-grow: 1;
   }
-  
-  // .speaker-icon {
-  //     font-size: 1.5rem;
-  //     color: var(--primary-green);
-  // }
 
   .speaker-name {
-    color: var(--text-dark);
+    color: #2c3e50;
     font-weight: 700;
   }
 
-  .speaker-enterprise{
+  .speaker-enterprise {
+    color: #6c757d;
     font-size: 0.9rem;
     font-weight: 500;
-  }
 
-  .speaker-enterprise i {
-    opacity: 0.7;
+    i {
+      color: $sasi-purple; // Ícone da empresa em roxo
+      opacity: 0.8;
+    }
   }
-
 }
 
 @media (max-width: 768px) {
@@ -144,13 +170,11 @@
 
   .schedule-item {
     padding: 1rem;
-  }
-  .schedule-item .time-badge {
-    margin-bottom: 1rem;
+    .time-badge {
+      margin-bottom: 1rem;
+    }
   }
 
-@media (max-width: 768px) {
-  /* --- Seção de Programação --- */
   .programacao-section {
     .nav-pills {
       display: flex;
@@ -159,26 +183,16 @@
       padding-bottom: 1rem;
       justify-content: flex-start;
       -webkit-overflow-scrolling: touch;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      &::-webkit-scrollbar { display: none; }
     }
 
     .nav-pills .nav-link {
       margin: 0 0.25rem;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
       flex-shrink: 0;
     }
 
     .schedule-item {
-      padding: 1.25rem;
       text-align: center;
-    }
-    
-    .schedule-item .time-badge {
-      margin-bottom: 1rem;
     }
   }
 
@@ -186,6 +200,7 @@
     .speaker-card {
       padding: 1.5rem 1rem; 
       text-align: center; 
+      &:hover { transform: translateY(0); }
     }
     .speaker-content {
       flex-direction: column; 
@@ -193,11 +208,7 @@
       gap: 1rem; 
     }
     .speaker-media {
-      width: 70px; 
-      height: 70px;
-    }
-    .speaker-icon-fallback {
-      font-size: 3rem; 
+      width: 70px; height: 70px;
     }
     .speaker-info {
       display: flex; 
@@ -211,10 +222,5 @@
     .speaker-enterprise {
       font-size: 0.85rem; 
     }
-    .speaker-card:hover {
-      transform: translateY(0); 
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
-    }
   }
-}
 }

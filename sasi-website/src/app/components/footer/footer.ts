@@ -24,23 +24,9 @@ export class Footer {
   contatos: Contato[] = [
     {
       type: "Email",
-      value: "contato@vicipel.com",
+      value: "semanaacademicasisasi@gmail.com",
       icon: "fas fa-envelope",
-      link: "mailto:contato@vicipel.com"
-    },
-
-    {
-      type: "Telefone",
-      value: "(11) 98765-4321",
-      icon: "fas fa-phone",
-      link: "tel:+5511987654321"
-    },
-
-    {
-      type: "WhatsApp",
-      value: "(11) 98765-4321",
-      icon: "fab fa-whatsapp",
-      link: "https://wa.me/5511987654321"
+      link: "mailto:semanaacademicasisasi@gmail.com"
     },
 
     {

@@ -14,7 +14,7 @@ export class Homepage {
     date: "23 de Fevereiro a 27 de Fevereiro de 2026",
     location: "Acre, Brasil",
     description:
-      "Desafios e Oportunidades na Pecuária Leiteira Rumo a Um Futuro Resiliente.",
+      "Conectando Inteligência, Segurança e Desenvolvimento.",
     highlights: [
       "Palestras Inspiradoras sobre temas como Inteligência Artificial, Engenharia de Software, Dados e Inovação.",
       "Minicursos Práticos para você aprender novas ferramentas e linguagens.",
